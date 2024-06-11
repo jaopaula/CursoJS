@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Seleção DOM</title>
+    <style>
+        .highlight { background-color: yellow; }
+    </style>
+</head>
+<body>
+    <h1 id="header">Cabeçalho</h1>
+    <p class="text">Parágrafo 1</p>
+    <p class="text">Parágrafo 2</p>
+    <input type="text" name="username" value="usuário">
+    <div class="container">
+        <p>Parágrafo no contêiner</p>
+    </div>
+    
+    <script>
+        // getElementById
+        var header = document.getElementById('header');
+        console.log(header);
+
+        // getElementsByClassName
+        var texts = document.getElementsByClassName('text');
+        console.log(texts);
+
+        // getElementsByTagName
+        var paragraphs = document.getElementsByTagName('p');
+        console.log(paragraphs);
+
+        // getElementsByName
+        var usernameInput = document.getElementsByName('username');
+        console.log(usernameInput);
+
+        // querySelector
+        var containerParagraph = document.querySelector('.container p');
+        console.log(containerParagraph);
+
+        // querySelectorAll
+        var allParagraphs = document.querySelectorAll('p');
+        console.log(allParagraphs);
+
+        // Aplicando estilo aos elementos selecionados
+        header.style.color = 'blue';
+        for (var i = 0; i < texts.length; i++) {
+            texts[i].style.fontWeight = 'bold';
+        }
+        containerParagraph.classList.add('highlight');
+    </script>
+</body>
+</html>

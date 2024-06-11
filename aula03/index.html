@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AULA 09</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1> Introdução ao DOM</h1>
+    <p>Aqui vai o <strong>resultado</strong></p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em <strong>JavaScript.</strong></p>
+    <div id="msg">Clique em mim</div>
+    <div class="oie">TESTE</div>
+    <script>
+        window.document.write(window.document.URL );
+        
+                                            //MARCA
+        var joao = window.document.getElementsByTagName('p')[0]; //[0] é o primeiro parágrafo, precisa colocar [] pois é element*S* no plural, então tem que especificar
+        window.document.write('<br> Está escrito assim: ' + joao.innerText); //innerText só o texto
+        document.write('<br>' + joao.innerHTML) // innerHTML pega texto e a formatação
+        joao.style.color = 'blue';
+
+                                            //ID
+        var d = window.document.getElementById('msg');
+        document.write('<br>' + msg.innerHTML); msg.style.background = 'green'; //Printou a mesma mensagem; Mudou fundo da div
+        window.document.getElementById ('msg').innerText = 'Olá' //mudou de "Clique em mim" para "Olá"
+        d.innerText = 'HAHAHA' //mudou de "Olá" para "HAHAHA" (sem usar variável)
+        
+                                            //NOME
+        //var d = window.document.getElementsByName('msg')[0]; //iria criar variavel CASO ao inves de id tivesse name na div
+        //d.InnerText = 'JavaScript' //iria mudar o que ta escrito para JavaScript
+
+                                            //CLASSE
+        //var d = window.document.getElementsByClassName('msg')[0]; //iria criar variavel CASO ao inves de id tivesse Class na div
+        //d.InnerText = 'JavaScript' //iria mudar o que ta escrito para JavaScript
+
+                                            //SELETOR
+                                        //"."= class; "#" = id
+        var s = window.document.querySelector('div.oie')
+        s.style.color = 'blue'
+        s.style.background = 'black'
+        </script>
+</body>
+</html>

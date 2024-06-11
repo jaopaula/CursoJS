@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula01 Curso em Video</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Olá Mundo!</h1>
+    <!--Comentário HTML-->
+    <p>Já me livrei da maldição!</p>  
+    <script>
+        var n1 = Number.parseFloat(window.prompt("Digite um número: ")); //só aceita número com ponto flutuante
+        var n2 = Number.parseInt(window.prompt("Digite outro número: ")); //só aceita número Inteiro
+        var n3 = Number(window.prompt("Digite outro número: ")); //Vê qual se encaixa melhor
+        var s = n1 + n2 + n3;
+        // (number +number) para adição
+        // (string + string) para concatenação
+        //window.alert("A soma destes Dois Valores é igual a: " + String(s)); //Fez o S virar uma String
+        window.alert(`A soma de ${n1} mais ${n2} mais ${n3} é igual a ${s}`);
+    </script>
+</body>
+</html> 
